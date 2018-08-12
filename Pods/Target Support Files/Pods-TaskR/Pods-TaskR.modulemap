@@ -1,0 +1,6 @@
+framework module Pods_TaskR {
+  umbrella header "Pods-TaskR-umbrella.h"
+
+  export *
+  module * { export * }
+}
