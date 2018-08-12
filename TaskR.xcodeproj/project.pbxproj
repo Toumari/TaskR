@@ -13,7 +13,7 @@
 		DE2E284E210F9C6300C89D2C /* TaskR.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DE2E284C210F9C6300C89D2C /* TaskR.xcdatamodeld */; };
 		DE2E2850210F9C6700C89D2C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE2E284F210F9C6700C89D2C /* Assets.xcassets */; };
 		DE2E2853210F9C6700C89D2C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE2E2851210F9C6700C89D2C /* LaunchScreen.storyboard */; };
-		DE2E28652117920100C89D2C /* item.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2E28642117920100C89D2C /* item.swift */; };
+		DE2E288C211CC95D00C89D2C /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2E288B211CC95D00C89D2C /* CategoryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +25,7 @@
 		DE2E284F210F9C6700C89D2C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DE2E2852210F9C6700C89D2C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DE2E2854210F9C6700C89D2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DE2E28642117920100C89D2C /* item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = item.swift; sourceTree = "<group>"; };
+		DE2E288B211CC95D00C89D2C /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +64,6 @@
 				DE2E28682117924B00C89D2C /* Views */,
 				DE2E28692117925400C89D2C /* Supporting Files */,
 				DE2E2854210F9C6700C89D2C /* Info.plist */,
-				DE2E284C210F9C6300C89D2C /* TaskR.xcdatamodeld */,
 			);
 			path = TaskR;
 			sourceTree = "<group>";
@@ -72,7 +71,7 @@
 		DE2E28662117922300C89D2C /* Data Model */ = {
 			isa = PBXGroup;
 			children = (
-				DE2E28642117920100C89D2C /* item.swift */,
+				DE2E284C210F9C6300C89D2C /* TaskR.xcdatamodeld */,
 			);
 			path = "Data Model";
 			sourceTree = "<group>";
@@ -80,6 +79,7 @@
 		DE2E28672117923900C89D2C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				DE2E288B211CC95D00C89D2C /* CategoryViewController.swift */,
 				DE2E2847210F9C6300C89D2C /* ToDoListViewController.swift */,
 			);
 			path = Controllers;
@@ -173,7 +173,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE2E28652117920100C89D2C /* item.swift in Sources */,
+				DE2E288C211CC95D00C89D2C /* CategoryViewController.swift in Sources */,
 				DE2E284E210F9C6300C89D2C /* TaskR.xcdatamodeld in Sources */,
 				DE2E2848210F9C6300C89D2C /* ToDoListViewController.swift in Sources */,
 				DE2E2846210F9C6300C89D2C /* AppDelegate.swift in Sources */,
