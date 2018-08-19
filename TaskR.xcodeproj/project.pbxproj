@@ -7,10 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE00EA5921238FBF00B9C2EE /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE00EA5821238FBF00B9C2EE /* Item.swift */; };
+		DE00EA5B21238FC800B9C2EE /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE00EA5A21238FC800B9C2EE /* Category.swift */; };
 		DE2E2846210F9C6300C89D2C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2E2845210F9C6300C89D2C /* AppDelegate.swift */; };
 		DE2E2848210F9C6300C89D2C /* ToDoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2E2847210F9C6300C89D2C /* ToDoListViewController.swift */; };
 		DE2E284B210F9C6300C89D2C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE2E2849210F9C6300C89D2C /* Main.storyboard */; };
-		DE2E284E210F9C6300C89D2C /* TaskR.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DE2E284C210F9C6300C89D2C /* TaskR.xcdatamodeld */; };
 		DE2E2850210F9C6700C89D2C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE2E284F210F9C6700C89D2C /* Assets.xcassets */; };
 		DE2E2853210F9C6700C89D2C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE2E2851210F9C6700C89D2C /* LaunchScreen.storyboard */; };
 		DE2E288C211CC95D00C89D2C /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2E288B211CC95D00C89D2C /* CategoryViewController.swift */; };
@@ -21,11 +22,12 @@
 		3D694BAA97DA769C82BE9D89 /* Pods-TaskR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaskR.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TaskR/Pods-TaskR.debug.xcconfig"; sourceTree = "<group>"; };
 		51BB63D5713D0D68C32DA21D /* Pods-TaskR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaskR.release.xcconfig"; path = "Pods/Target Support Files/Pods-TaskR/Pods-TaskR.release.xcconfig"; sourceTree = "<group>"; };
 		61355B85BACA69B454DF85FA /* Pods_TaskR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TaskR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE00EA5821238FBF00B9C2EE /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		DE00EA5A21238FC800B9C2EE /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		DE2E2842210F9C6300C89D2C /* TaskR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaskR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE2E2845210F9C6300C89D2C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE2E2847210F9C6300C89D2C /* ToDoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListViewController.swift; sourceTree = "<group>"; };
 		DE2E284A210F9C6300C89D2C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		DE2E284D210F9C6300C89D2C /* TaskR.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TaskR.xcdatamodel; sourceTree = "<group>"; };
 		DE2E284F210F9C6700C89D2C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DE2E2852210F9C6700C89D2C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DE2E2854210F9C6700C89D2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -86,7 +88,8 @@
 		DE2E28662117922300C89D2C /* Data Model */ = {
 			isa = PBXGroup;
 			children = (
-				DE2E284C210F9C6300C89D2C /* TaskR.xcdatamodeld */,
+				DE00EA5A21238FC800B9C2EE /* Category.swift */,
+				DE00EA5821238FBF00B9C2EE /* Item.swift */,
 			);
 			path = "Data Model";
 			sourceTree = "<group>";
@@ -240,10 +243,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE00EA5921238FBF00B9C2EE /* Item.swift in Sources */,
 				DE2E288C211CC95D00C89D2C /* CategoryViewController.swift in Sources */,
-				DE2E284E210F9C6300C89D2C /* TaskR.xcdatamodeld in Sources */,
 				DE2E2848210F9C6300C89D2C /* ToDoListViewController.swift in Sources */,
 				DE2E2846210F9C6300C89D2C /* AppDelegate.swift in Sources */,
+				DE00EA5B21238FC800B9C2EE /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,7 +395,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TN9AW6LNJU;
 				INFOPLIST_FILE = TaskR/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = toumari.jackwilliams.TaskR;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -407,7 +414,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TN9AW6LNJU;
 				INFOPLIST_FILE = TaskR/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = toumari.jackwilliams.TaskR;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -437,19 +447,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		DE2E284C210F9C6300C89D2C /* TaskR.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				DE2E284D210F9C6300C89D2C /* TaskR.xcdatamodel */,
-			);
-			currentVersion = DE2E284D210F9C6300C89D2C /* TaskR.xcdatamodel */;
-			path = TaskR.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = DE2E283A210F9C6300C89D2C /* Project object */;
 }
