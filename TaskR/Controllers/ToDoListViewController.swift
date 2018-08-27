@@ -20,12 +20,13 @@ class ToDoListViewController: SwipeTableViewController {
     var selectedCategory : Category? {
         didSet {
             loadItems()
+            self.tableView.reloadData()
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        tableView.reloadData()
         tableView.separatorStyle = .none
     }
     
@@ -36,6 +37,8 @@ class ToDoListViewController: SwipeTableViewController {
         guard let colorHex = selectedCategory?.colour else {fatalError()}
         
         updateNavBar(withHexCode: colorHex)
+        
+        tableView.reloadData()
                 
     }
     
@@ -127,6 +130,7 @@ class ToDoListViewController: SwipeTableViewController {
                     newItem.title = textField.text!
                     newItem.dateCreated = Date()
                     currentCategory.items.append(newItem)
+                    self.selectedCategory?.progress = (self.todoItems?.count)!
                 }
                 } catch {
                     print("error")
@@ -151,6 +155,7 @@ class ToDoListViewController: SwipeTableViewController {
     func loadItems() {
         
        todoItems = selectedCategory?.items.sorted(byKeyPath: "title", ascending: true)
+        tableView.reloadData()
 
 }
     
@@ -159,11 +164,15 @@ class ToDoListViewController: SwipeTableViewController {
             do {
             try realm.write {
                 realm.delete(item)
+                selectedCategory?.progress = (todoItems?.count)!
+                
             }
             } catch {
                 print("error")
             }
+            
         }
+        
     }
 }
 

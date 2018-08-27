@@ -25,6 +25,10 @@ class CategoryViewController: SwipeTableViewController {
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        tableView.reloadData()
+    }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return categoryArray?.count ?? 1
@@ -38,14 +42,27 @@ class CategoryViewController: SwipeTableViewController {
             
             cell.textLabel?.text = category.name
             
+            let progress = cell.viewWithTag(100) as! UIProgressView //refer the label by Tag
+            
+            let label2 = cell.viewWithTag(101) as! UILabel //refer the label by Tag
+            
             guard let categoryColour = UIColor(hexString: category.colour) else {fatalError()}
             
             cell.backgroundColor = categoryColour
             
+            label2.text = String(category.progress) + " Items"
+            
+            progress.setProgress(Float(category.progress) / 10 , animated: true)
+            
             cell.textLabel?.textColor = ContrastColorOf(categoryColour, returnFlat: true)
             
+            label2.textColor = ContrastColorOf(categoryColour, returnFlat: true)
+            
         }
+        
         return cell
+        
+        
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -69,17 +86,24 @@ class CategoryViewController: SwipeTableViewController {
         let alert = UIAlertController(title: "Add New TaskR Category", message: "", preferredStyle: .alert)
         
         let action = UIAlertAction(title: "Add Category", style: .default) { (action) in
+            
             //What happens once user clicks add item
             
             
             let newCategory = Category()
             newCategory.name = textField.text!
             newCategory.colour = UIColor.randomFlat.hexValue()
+            newCategory.progress = 0
             
             self.save(category: newCategory)
             
             self.loadItems()
         }
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (action:UIAlertAction!) in
+            print("Cancel button tapped");
+        }
+        
         
         alert.addTextField { (alertTextField) in
             alertTextField.placeholder = "Create new category"
@@ -87,6 +111,7 @@ class CategoryViewController: SwipeTableViewController {
         }
         
         alert.addAction(action)
+        alert.addAction(cancelAction)
         
         present(alert, animated: true, completion: nil)
         
@@ -107,6 +132,7 @@ class CategoryViewController: SwipeTableViewController {
         
         categoryArray = realm.objects(Category.self)
         tableView.reloadData()
+    
     }
     
     override func updateModel(at indexPath: IndexPath) {

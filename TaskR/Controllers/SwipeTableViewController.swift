@@ -11,6 +11,8 @@ import SwipeCellKit
 
 class SwipeTableViewController: UITableViewController, SwipeTableViewCellDelegate {
 
+    @IBOutlet weak var progressBar: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.rowHeight = 80.0
